@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { ShoppingCart, Plus, Minus, Search, LogIn, LogOut, Star } from 'lucide-react';
-import { AppwriteService, APPWRITE_CONFIG } from './appwriteServices';
+import { AppwriteService } from './appwriteServices';
 import './App.css';
 
 // Context pour l'authentification
@@ -499,7 +499,6 @@ const GroceryStoreApp = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState('login');
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-  const [orders, setOrders] = useState([]);
   const [showOrderSuccess, setShowOrderSuccess] = useState(false);
   const [loadingProducts, setLoadingProducts] = useState(true);
   
@@ -612,7 +611,6 @@ const GroceryStoreApp = () => {
       
       newOrder.items = cart;
       
-      setOrders(prev => [newOrder, ...prev]);
       setCart([]);
       
       setIsCheckoutOpen(false);
