@@ -1,0 +1,32 @@
+name,price,category,image,unit,stock,bio,description,rating,inStock
+VDN Muscat de Rivesaltes,13.40,vins,,75cl,,false,Vin doux naturel parfait pour l'apéritif,4.5,true
+VDN Muscat de Noël,12.40,vins,,75cl,,false,Édition spéciale pour les fêtes,4.8,true
+VDN Rivesaltes Grenat,15.00,vins,,75cl,,false,Vin doux naturel rouge grenat,4.6,true
+VDN Rivesaltes Tuilé Hors d'Âge,16.00,vins,,75cl,,false,Vin vieilli notes complexes,4.9,true
+VDN Rivesaltes Ambré 2016,19.00,vins,,75cl,,false,Millésime exceptionnel,4.7,true
+AOP Côtes du Roussillon Rouge Sans sulfites,9.60,vins,,75cl,,true,Vin rouge bio sans sulfites ajoutés,4.3,true
+AOP Côtes du Roussillon Rouge cuvée Gérard,9.60,vins,,75cl,,false,Cuvée prestige du domaine,4.5,true
+VDF le bon sens Rouge sans sulfites,8.50,vins,,75cl,,true,Vin de France naturel,4.2,true
+IGP Côtes catalanes Rosé,8.60,vins,,75cl,,false,Rosé frais et fruité,4.4,true
+IGP Côtes Catalanes Muscat sec,7.40,vins,,75cl,,false,Muscat sec aromatique,4.3,true
+IGP Côtes Catalanes Chardonnay,8.40,vins,,75cl,,false,Chardonnay du sud,4.1,true
+Misco (Spiritueux à base de Muscat),20.00,spiritueux,,50cl,,false,Spiritueux artisanal partenariat avec la Distillerie Nicos,4.8,true
+Nectar d'abricots,4.20,boissons,,75cl,,false,100% fruits du domaine,4.6,true
+Jus de raisin Merlot,3.60,boissons,,75cl,,false,Jus de raisin pur,4.4,true
+Jus de raisin Muscat,3.60,boissons,,75cl,,false,Jus de muscat aromatique,4.5,true
+Jus de raisin Mourvèdre,3.60,boissons,,75cl,,false,Jus de mourvèdre,4.3,true
+Jus de raisin Grenache Blanc,3.60,boissons,,75cl,,false,Jus blanc délicat,4.4,true
+BIO jus de raisin Muscat petit grain,11.00,boissons,,3L,,true,Jus bio certifié,4.7,true
+Olives vertes Lucques,5.00,epicerie,,200g,,false,Olives de table premium,4.5,true
+Huile d'olive,23.60,epicerie,,75cl,,false,Huile d'olive extra vierge,4.9,true
+Huile essentielle de Romarin,4.95,epicerie,,10ml,,false,Huile essentielle pure,4.6,true
+Huile essentielle de Thym Linalol,7.40,epicerie,,5ml,,false,Huile essentielle de thym,4.7,true
+Huile essentielle de Lavande Maillette,4.95,epicerie,,10ml,,false,Lavande vraie,4.8,true
+Huile essentielle de Lavande Maillette,14.25,epicerie,,30ml,,false,Lavande vraie grand format,4.8,true
+Hydrolat (Thym Romarin ou Lavande),5.10,epicerie,,200ml,,false,Hydrolat artisanal,4.5,true
+Verveine feuilles entières,2.25,epicerie,,15g,,false,Verveine séchée,4.3,true
+Thym Cerdagne feuilles entières,4.50,epicerie,,50g,,false,Thym de montagne,4.6,true
+Mélisse feuilles entières,3.30,epicerie,,10g,,false,Mélisse citronnée,4.4,true
+Sarriette feuilles entières,4.50,epicerie,,45g,,false,Plante aromatique rare,4.2,true
+Confiture d'abricots,4.50,epicerie,,375g,,false,Confiture artisanale,4.7,true
+Confiture de Cerises,4.60,epicerie,,220g,,false,Confiture de cerises du domaine,4.6,true
