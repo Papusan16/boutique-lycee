@@ -1,17 +1,26 @@
 // src/appwriteServices.js
 import { Client, Account, Databases, ID, Query } from 'appwrite';
 
-// Configuration Appwrite - VOS VRAIS IDs
+// Configuration Appwrite - Utilise les variables d'environnement
 export const APPWRITE_CONFIG = {
-  endpoint: 'https://cloud.appwrite.io/v1',
-  projectId: '68595bfa0034b449b053', // Votre Project ID
-  databaseId: '68595c75002dbc603bce', // Votre Database ID
+  endpoint: process.env.REACT_APP_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1',
+  projectId: process.env.REACT_APP_APPWRITE_PROJECT_ID || '68595bfa0034b449b053',
+  databaseId: process.env.REACT_APP_APPWRITE_DATABASE_ID || '68595c75002dbc603bce',
   collectionsIds: {
-    products: '68595c88000b3c0653f4', // Votre Products Collection ID
-    orders: 'orders', // Votre Orders Collection ID
+    products: process.env.REACT_APP_APPWRITE_PRODUCTS_COLLECTION_ID || '68595c88000b3c0653f4',
+    orders: process.env.REACT_APP_APPWRITE_ORDERS_COLLECTION_ID || 'orders',
     users: 'users'
   }
 };
+
+// Debug : Log de la configuration
+console.log('🔧 Appwrite Config:', {
+  endpoint: APPWRITE_CONFIG.endpoint,
+  projectId: APPWRITE_CONFIG.projectId,
+  databaseId: APPWRITE_CONFIG.databaseId,
+  productsCollectionId: APPWRITE_CONFIG.collectionsIds.products,
+  ordersCollectionId: APPWRITE_CONFIG.collectionsIds.orders
+});
 
 // Initialisation du client Appwrite
 const client = new Client()
@@ -142,14 +151,24 @@ export const AppwriteService = {
   products: {
     async getAllProducts() {
       try {
+        console.log('🔄 Chargement produits avec config:', {
+          databaseId: APPWRITE_CONFIG.databaseId,
+          collectionId: APPWRITE_CONFIG.collectionsIds.products
+        });
+        
         const response = await databases.listDocuments(
           APPWRITE_CONFIG.databaseId,
           APPWRITE_CONFIG.collectionsIds.products
         );
-        return response.documents;
+        
+        console.log('📦 Réponse Appwrite complète:', response);
+        console.log('📦 Documents trouvés:', response.documents?.length);
+        
+        return response.documents || [];
       } catch (error) {
-        console.error('Erreur récupération produits:', error);
-        // Retourne les produits en dur en cas d'erreur
+        console.error('❌ Erreur récupération produits:', error);
+        console.error('❌ Détails de l\'erreur:', error.message);
+        console.error('❌ Type d\'erreur:', error.type);
         return [];
       }
     },
